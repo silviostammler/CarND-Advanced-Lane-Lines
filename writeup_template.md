@@ -135,7 +135,7 @@ I implemented this step in the fourth code cell in the function `visualization_l
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./test_videos_output/project_video.mp4)
 
 The pipeline for lane-line detection in a video stream is contained in the seventh code cell of the IPython notebook "./P2.ipynb". In general, it has the same structure as for processing the test images. However, it is extended by some functionality. In this context the class `Line()` has to be mentioned tracking all important parameters during lane-line detection (third code cell). Furthermore, in each iteration a sanity check is carried out testing whether the solution for the current frame is accepted. A look-ahead filter is also implemented (in function `find_lane_pixels()`) searching in the neighborhood of a previously detected solution. Finally, a reset mechanism handles the case when a maximum number of bad frames (`MAX_bad_frames`) in a row appears. The lane-line pixel detection is then switched back according to the search from scratch approach.
 
